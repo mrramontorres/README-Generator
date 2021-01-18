@@ -38,9 +38,10 @@ inquirer
       name: 'test',
     },
   ])
-  .then(() =>
-      console.log('Success!')
-  );
+  .then((data) => {
+    const filename = `${data.title.toLowerCase().split(' ').join('')}.md`;
+    console.log(filename);
+  });
 
 
 // TODO: Create a function to write README file
