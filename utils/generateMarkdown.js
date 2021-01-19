@@ -14,17 +14,20 @@ function renderLicenseSection(license) {}
 function generateMarkdown(userInputs) {
 
   //Table of Contents provided by user
-  let toc = `## Table of Contents`;
+  let toc = `## Table of Contents\n`;
 
   if(userInputs.installation !=='') { toc += 
     `* [Installation](#installation)\n`
   };
+  
   if(userInputs.usage !=='') { toc += 
     `* [Usage](#usage)\n`
   };
+  
   if(userInputs.contribution !=='') { toc += 
     `* [Contribution](#contribution)\n`
   };
+  
   if(userInputs.test !=='') { toc += 
     `* [Tests](#test)\n`
   };
@@ -46,7 +49,7 @@ function generateMarkdown(userInputs) {
   markdownSample +=
   `
   ## Installation 
-  ${userInputs.installation}\n
+  ${userInputs.installation}
   `
   };
   
@@ -54,7 +57,7 @@ function generateMarkdown(userInputs) {
   markdownSample +=
   `
   ## Usage 
-  ${userInputs.usage}\n
+  ${userInputs.usage}
   `
   };
   
@@ -62,7 +65,7 @@ function generateMarkdown(userInputs) {
     markdownSample +=
   `
   ## Contributing
-  ${userInputs.contribution}\n
+  ${userInputs.contribution}
   `
   };
 
@@ -70,18 +73,21 @@ function generateMarkdown(userInputs) {
     markdownSample +=
   `
   ## Tests
-  ${userInputs.test}\n
+  ${userInputs.test}
   `
   };
 
+  if(userInputs.username && userInputs.email !== null) {
   `
   ## Questions
   GitHub: @${userInputs.username}
   Email: ${userInputs.email}
-
-
+  `  
+  };
+  
+  `
   ## License
-  ${userInputs.license}\n
+  ${userInputs.license}
   `
 
   return markdownSample;
