@@ -13,30 +13,38 @@ function renderLicenseSection(license) {}
 //Function that generates markdown for README
 function generateMarkdown(userInputs) {
 
-  //Markdown
-  let markdownSample = `# ${userInputs.title}
-  Badge posted here TBD.
-
-  ## Description 
-  ${userInputs.description}`
-
   //Table of Contents provided by user
-  let toc = `## Table of Contents`;
+  let toc = `## Table of Contents\n`;
 
   if(userInputs.installation !=='') { 
-    toc += `*[Installation](#installation)`
+    toc += `*[Installation](#installation)\n`
   };
   if(userInputs.usage !=='') { 
-    toc += `*[Usage](#usage)`
+    toc += `*[Usage](#usage)\n`
   };
   if(userInputs.contribution !=='') { 
-    toc += `*[Contribution](#contribution)`
+    toc += `*[Contribution](#contribution)\n`
   };
   if(userInputs.test !=='') { 
-    toc += `*[Tests](#test)`
+    toc += `*[Tests](#test)\n`
   };
+
+  console.log(toc);
+
+  //Markdown
+  let markdownSample = `
+  # ${userInputs.title}
   
-  `## Installation 
+  Badge posted here TBD.
+  
+  ## Description 
+  ${userInputs.description}\n
+  `
+
+  markdownSample += toc;
+
+  `
+  ## Installation 
   ${userInputs.installation}
 
   ## Usage 
