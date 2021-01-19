@@ -19,17 +19,28 @@ function generateMarkdown(userInputs) {
   ## Description
   ${userInputs.description}
 
+  ## Table of Contents
+
+
   ## Installation
   ${userInputs.installation}
 
   ## Usage
   ${userInputs.usage}
 
-  ## Contribution
+  ## License
+  ${userInputs.license}
+
+  ## Contributing
   ${userInputs.contribution}
 
-  ## Testing
+  ## Tests
   ${userInputs.test}
+
+  ## Questions
+  GitHub: @${userInputs.username}
+  Email: ${userInputs.email}
+
   `
   return markdownSample;
 }

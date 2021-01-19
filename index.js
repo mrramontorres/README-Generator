@@ -10,10 +10,9 @@ const questions = [
     type: 'input',
     message: 'Enter your project title:',
     name: 'title',
-    default: 'Project Title',
     validate: function (response) {
-        if (response.length < 1) {
-          return console.log("Enter a title for your project.");
+        if (response ===  '') {
+          return console.log("Please enter a title.");
         }
         return true;
       }
@@ -22,34 +21,67 @@ const questions = [
     type: 'input',
     message: 'Enter project description:',
     name: 'description',
-    default: 'Project Description',
     validate: function (response) {
-        if (response.length < 1) {
-          return console.log("Enter a description for your project.");
+        if (response === '') {
+          return console.log("Please enter a description.");
         }
         return true;
       }
   },
-/*  {
+  {
     type: 'input',
-    message: 'Enter installation instructions:',
+    message: 'Enter installation instructions you wish to include or leave black if there are none.',
     name: 'installation',
   },
   {
     type: 'input',
-    message: 'Enter usage information:',
+    message: 'Enter any usage instructions you wish to include.',
     name: 'usage',
   },
   {
     type: 'input',
-    message: 'Enter contribution guidelines:',
+    message: 'Enter any contribution guidelines you wish to include.',
     name: 'contribution',
   },
-*/  {
+  {
     type: 'input',
-    message: 'Enter test instructions:',
+    message: 'Enter any test instructions you have written.',
     name: 'test',
   },
+  {
+    type: 'input',
+    message: 'Please chose a license from the following optoins:',
+    name: 'license',
+    choices: ['Apache 2.0 License','Boost Software License 1.0', 'BSD 3-Clause License', 
+    'BSD 2-Clause License', 'CC0','Attribution 4.0 International','GNU GPL v3','GNU AGPL v3',
+    'IBM Public License Version 1.0','ISC License (ISC)','The MIT License',
+    'Mozilla Public License 2.0','Attribution License (BY)', 'Open Database License (ODbL)',
+    'Public Domain Dedication and License (PDDL)', 'The Perl License', 'SIL Open Font License 1.1']
+  },
+  {
+    type: 'input',
+    message: 'Enter your GitHub username:',
+    name: 'username',
+    validate: function (response) {
+        if (response ===  '') {
+          return console.log("Please enter a valid GitHub username.");
+        }
+        return true;
+      }
+  },
+  {
+    type: 'input',
+    message: 'Enter your contact email.',
+    name: 'email',
+    default: 'email@domain.com',
+    validate: function (response) {
+        if (response ===  '') {
+          return console.log("Please enter a valid email.");
+        }
+        return true;
+      }
+  },
+
 ];
 
 //Function to write README file
@@ -75,7 +107,6 @@ async function init() {
 
     //Pass data to generateMarkdown
     const markdown = generateMarkdown(userInputs);
-    console.log(markdown);
 
     //Write file
     await writeFileAsync('README.md', markdown);
