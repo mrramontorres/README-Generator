@@ -30,27 +30,27 @@ const questions = [
   },
   {
     type: 'input',
-    message: 'Enter installation instructions you wish to include or leave black if there are none.',
+    message: 'Enter installation instructions otherwise leave blank.',
     name: 'installation',
   },
   {
     type: 'input',
-    message: 'Enter any usage instructions you wish to include.',
+    message: 'Enter any usage instructions otherwise leave blank.',
     name: 'usage',
   },
   {
     type: 'input',
-    message: 'Enter any contribution guidelines you wish to include.',
+    message: 'Enter any contribution guidelines otherwise leave blank.',
     name: 'contribution',
   },
   {
     type: 'input',
-    message: 'Enter any test instructions you have written.',
+    message: 'Enter any tests otherwise leave blank.',
     name: 'test',
   },
   {
     type: 'list',
-    message: 'Please chose a license from the following optoins:',
+    message: 'Please chose a license from the following options:',
     name: 'license',
     choices: ['Apache 2.0 License','Boost Software License 1.0', 'BSD 3-Clause License', 
     'BSD 2-Clause License', 'CC0','Attribution 4.0 International','GNU GPL v3','GNU AGPL v3',

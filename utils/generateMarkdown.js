@@ -10,25 +10,36 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
+//Function that generates markdown for README
 function generateMarkdown(userInputs) {
-  let markdownSample =
-  `
-  # ${userInputs.title}
 
-  ## Description
-  ${userInputs.description}
-  
-  ## Table of Contents
-  `
-  if (userInputs.installation !== '') {
-    `*[Installation](#installation)`
+  //Markdown
+  let markdownSample = `# ${userInputs.title}
+  Badge posted here TBD.
+
+  ## Description 
+  ${userInputs.description}`
+
+  //Table of Contents provided by user
+  let toc = `## Table of Contents`;
+
+  if(userInputs.installation !=='') { 
+    toc += `*[Installation](#installation)`
   };
-  `
-  ## Installation
+  if(userInputs.usage !=='') { 
+    toc += `*[Usage](#usage)`
+  };
+  if(userInputs.contribution !=='') { 
+    toc += `*[Contribution](#contribution)`
+  };
+  if(userInputs.test !=='') { 
+    toc += `*[Tests](#test)`
+  };
+  
+  `## Installation 
   ${userInputs.installation}
 
-  ## Usage
+  ## Usage 
   ${userInputs.usage}
 
   ## License
@@ -43,7 +54,6 @@ function generateMarkdown(userInputs) {
   ## Questions
   GitHub: @${userInputs.username}
   Email: ${userInputs.email}
-
   `
   return markdownSample;
 }
