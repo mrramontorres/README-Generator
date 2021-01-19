@@ -18,10 +18,13 @@ function generateMarkdown(userInputs) {
 
   ## Description
   ${userInputs.description}
-
+  
   ## Table of Contents
-
-
+  `
+  if (userInputs.installation !== '') {
+    `*[Installation](#installation)`
+  };
+  `
   ## Installation
   ${userInputs.installation}
 
