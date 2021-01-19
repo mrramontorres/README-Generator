@@ -14,19 +14,19 @@ function renderLicenseSection(license) {}
 function generateMarkdown(userInputs) {
 
   //Table of Contents provided by user
-  let toc = `## Table of Contents\n`;
+  let toc = `## Table of Contents`;
 
   if(userInputs.installation !=='') { 
-    toc += `-[Installation](#installation)\n`
+    toc += `-[Installation](#installation)`
   };
   if(userInputs.usage !=='') { 
-    toc += `-[Usage](#usage)\n`
+    toc += `-[Usage](#usage)`
   };
   if(userInputs.contribution !=='') { 
-    toc += `-[Contribution](#contribution)\n`
+    toc += `-[Contribution](#contribution)`
   };
   if(userInputs.test !=='') { 
-    toc += `-[Tests](#test)\n`
+    toc += `-[Tests](#test)`
   };
 
   //console.log(toc);
