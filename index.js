@@ -49,7 +49,7 @@ const questions = [
     name: 'test',
   },
   {
-    type: 'input',
+    type: 'list',
     message: 'Please chose a license from the following optoins:',
     name: 'license',
     choices: ['Apache 2.0 License','Boost Software License 1.0', 'BSD 3-Clause License', 
