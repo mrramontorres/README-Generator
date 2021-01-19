@@ -17,16 +17,16 @@ function generateMarkdown(userInputs) {
   let toc = `## Table of Contents\n`;
 
   if(userInputs.installation !=='') { 
-    toc += `*[Installation](#installation)\n`
+    toc += `-[Installation](#installation)\n`
   };
   if(userInputs.usage !=='') { 
-    toc += `*[Usage](#usage)\n`
+    toc += `-[Usage](#usage)\n`
   };
   if(userInputs.contribution !=='') { 
-    toc += `*[Contribution](#contribution)\n`
+    toc += `-[Contribution](#contribution)\n`
   };
   if(userInputs.test !=='') { 
-    toc += `*[Tests](#test)\n`
+    toc += `-[Tests](#test)\n`
   };
 
   //console.log(toc);
@@ -73,7 +73,7 @@ function generateMarkdown(userInputs) {
   ${userInputs.test}\n
   `
   };
-  
+
   `
   ## Questions
   GitHub: @${userInputs.username}
