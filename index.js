@@ -29,76 +29,61 @@ const questions = [
         }
         return true;
       }
-  }
+  },
+/*  {
+    type: 'input',
+    message: 'Enter installation instructions:',
+    name: 'installation',
+  },
+  {
+    type: 'input',
+    message: 'Enter usage information:',
+    name: 'usage',
+  },
+  {
+    type: 'input',
+    message: 'Enter contribution guidelines:',
+    name: 'contribution',
+  },
+*/  {
+    type: 'input',
+    message: 'Enter test instructions:',
+    name: 'test',
+  },
 ];
 
-
-/*
-inquirer
-  .prompt([
-    {
-        type: 'input',
-        message: 'Enter project title:',
-        name: 'title',
-        default: 'no title'
-        validate: function (response) {
-            var done = this.async();
-
-            if(response.length < 1) {
-                return console.log("Enter a title");
-            }
-            return true;
-        }
-    },
-    {
-      type: 'input',
-      message: 'Enter project description:',
-      name: 'description',
-    },
-    {
-      type: 'input',
-      message: 'Enter installation instructions:',
-      name: 'installation',
-    },
-    {
-      type: 'input',
-      message: 'Enter usage information:',
-      name: 'usage',
-    },
-    {
-      type: 'input',
-      message: 'Enter contribution guidelines:',
-      name: 'contribution',
-    },
-    {
-      type: 'input',
-      message: 'Enter test instructions:',
-      name: 'test',
-    },
-  ])
-  .then((data) => {
-    const filename = `${'README'}.md`;
-    console.log(filename);
-  });
-*/
-
-// TODO: Create a function to write README file
+//Function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile('README.md', data, (err) => { 
-      err ? console.error(err) : console.log('Successfully wrote README file!')
+  fs.writeFile(fileName, data, function(err) { 
+      if (err) {
+        return console.error(err);
+      }
+      console.log('Successfully wrote README file!');
     }
   )
 };
 
+const writeFileAsync = util.promisify(writeToFile);
 
-// TODO: Create a function to initialize app
-function init() {}
+//Function to initialize app
+async function init() {
+  try{
+
+    //Prompt Inqurier method
+    const userInputs = await inquirer.prompt(questions);
+    console.log("Responces received.");
+
+    //Pass data to generateMarkdown
+    const markdown = generateMarkdown(userInputs);
+    console.log(markdown);
+
+    //Write file
+    await writeFileAsync('README.md', markdown);
+
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 // Function call to initialize app
 init();
-
-
-
-
-
-
