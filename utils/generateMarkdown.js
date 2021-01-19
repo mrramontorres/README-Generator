@@ -16,17 +16,17 @@ function generateMarkdown(userInputs) {
   //Table of Contents provided by user
   let toc = `## Table of Contents`;
 
-  if(userInputs.installation !=='') { toc += `
-    * [Installation](#installation)`
+  if(userInputs.installation !=='') { toc += 
+    `* [Installation](#installation)\n`
   };
-  if(userInputs.usage !=='') { 
-    toc += `* [Usage](#usage)`
+  if(userInputs.usage !=='') { toc += 
+    `* [Usage](#usage)\n`
   };
-  if(userInputs.contribution !=='') { 
-    toc += `* [Contribution](#contribution)`
+  if(userInputs.contribution !=='') { toc += 
+    `* [Contribution](#contribution)\n`
   };
-  if(userInputs.test !=='') { 
-    toc += `* [Tests](#test)`
+  if(userInputs.test !=='') { toc += 
+    `* [Tests](#test)\n`
   };
 
   //console.log(toc);
