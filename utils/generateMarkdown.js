@@ -70,15 +70,11 @@ function generateMarkdown(userInputs) {
   `
   };
 
-  if(userInputs.username && userInputs.email !== null) {
-  `
+  markdownSample +=`
   ## Questions
   GitHub: @${userInputs.username}
   Email: ${userInputs.email}
-  `  
-  };
-  
-  `
+
   ## License
   ${userInputs.license}
   `
