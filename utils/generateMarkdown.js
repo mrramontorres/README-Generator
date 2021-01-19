@@ -29,40 +29,61 @@ function generateMarkdown(userInputs) {
     toc += `*[Tests](#test)\n`
   };
 
-  console.log(toc);
+  //console.log(toc);
 
   //Markdown
-  let markdownSample = `
-  # ${userInputs.title}
+  let markdownSample = 
+  `# ${userInputs.title}
   
   Badge posted here TBD.
   
   ## Description 
   ${userInputs.description}\n
   `
-
   markdownSample += toc;
 
+  if(userInputs.installation !=='') {
+  markdownSample +=
   `
   ## Installation 
-  ${userInputs.installation}
-
+  ${userInputs.installation}\n
+  `
+  };
+  
+  if(userInputs.usage !=='') {
+  markdownSample +=
+  `
   ## Usage 
-  ${userInputs.usage}
-
-  ## License
-  ${userInputs.license}
-
+  ${userInputs.usage}\n
+  `
+  };
+  
+  if(userInputs.contribution !=='') {
+    markdownSample +=
+  `
   ## Contributing
-  ${userInputs.contribution}
+  ${userInputs.contribution}\n
+  `
+  };
 
+  if(userInputs.test !==``) {
+    markdownSample +=
+  `
   ## Tests
-  ${userInputs.test}
-
+  ${userInputs.test}\n
+  `
+  };
+  
+  `
   ## Questions
   GitHub: @${userInputs.username}
   Email: ${userInputs.email}
+
+
+  ## License
+  ${userInputs.license}\n
   `
+
   return markdownSample;
 }
 
