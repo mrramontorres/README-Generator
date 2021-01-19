@@ -5,7 +5,6 @@ const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 //Array of questions for user input
-
 const questions = [
   {
     type: 'input',
@@ -15,6 +14,18 @@ const questions = [
     validate: function (response) {
         if (response.length < 1) {
           return console.log("Enter a title for your project.");
+        }
+        return true;
+      }
+  },
+  {
+    type: 'input',
+    message: 'Enter project description:',
+    name: 'description',
+    default: 'Project Description',
+    validate: function (response) {
+        if (response.length < 1) {
+          return console.log("Enter a description for your project.");
         }
         return true;
       }
@@ -72,19 +83,19 @@ inquirer
 */
 
 // TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
-
-
-// fs.writeFile('log.txt', process.argv[2], (err) =>
-//   err ? console.error(err) : console.log('Success!')
-// );
+function writeToFile(fileName, data) {
+  fs.writeFile('README.md', data, (err) => { 
+      err ? console.error(err) : console.log('Successfully wrote README file!')
+    }
+  )
+};
 
 
 // TODO: Create a function to initialize app
-//function init() {}
+function init() {}
 
 // Function call to initialize app
-//init();
+init();
 
 
 
