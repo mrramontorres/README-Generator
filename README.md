@@ -1,24 +1,21 @@
-# tues
+# Testing the title
   
-  Badge posted here TBD.
+Badge posted here TBD.
   
-  ## Description 
-  now
+## Description 
+Here is the project description
 
-  ## Table of Contents
-* [Installation](#installation)
-* [Tests](#test)
-  ## Installation 
-  now
-  
-  ## Tests
-  now
-  
-  ## Questions
-  GitHub: @mrramontorres
+## Table of Contents
+* [Contribution](#contribution)
 
-  Email: no email
+## Contributing
+Don't break it.
 
-  ## License
-  Public Domain Dedication and License (PDDL)
-  
+## Questions?
+* To reach me with additional questions feel free to contact me.
+GitHub: @mrramontorres
+
+Email: email@ramon.nyc
+
+## License
+Attribution License (BY)

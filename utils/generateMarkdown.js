@@ -27,58 +27,59 @@ function generateMarkdown(userInputs) {
 
   //console.log(toc);
 
-  //Markdown
-  let markdownSample = 
-  `# ${userInputs.title}
+//Markdown
+let markdownSample = 
+`# ${userInputs.title}
   
-  Badge posted here TBD.
+Badge posted here TBD.
   
-  ## Description 
-  ${userInputs.description}\n
-  `
+## Description 
+${userInputs.description}\n
+`
   markdownSample += toc;
 
   if(userInputs.installation !=='') {
   markdownSample +=
-  `
-  ## Installation 
-  ${userInputs.installation}
-  `
+`
+## Installation 
+${userInputs.installation}
+`
   };
   
   if(userInputs.usage !=='') {
   markdownSample +=
-  `
-  ## Usage 
-  ${userInputs.usage}
-  `
+`
+## Usage 
+${userInputs.usage}
+`
   };
   
   if(userInputs.contribution !=='') {
     markdownSample +=
-  `
-  ## Contributing
-  ${userInputs.contribution}
-  `
+`
+## Contributing
+${userInputs.contribution}
+`
   };
 
   if(userInputs.test !==``) {
     markdownSample +=
-  `
-  ## Tests
-  ${userInputs.test}
-  `
+`
+## Tests
+${userInputs.test}
+`
   };
 
-  markdownSample +=`
-  ## Questions?
-  * To reach me with additional questions feel free to contact me.
-  GitHub: @${userInputs.username}\n
-  Email: ${userInputs.email}
+  markdownSample +=
+`
+## Questions?
+* To reach me with additional questions feel free to contact me.
+GitHub: @${userInputs.username}\n
+Email: ${userInputs.email}
 
-  ## License
-  ${userInputs.license}
-  `
+## License
+${userInputs.license}
+`
   return markdownSample;
 }
 
