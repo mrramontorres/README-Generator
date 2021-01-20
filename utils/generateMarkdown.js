@@ -29,15 +29,17 @@ function generateMarkdown(userInputs) {
 
 //Markdown
 let markdownSample = 
-`# ${userInputs.title}
-  
-Badge posted here TBD.
+`
+# ${userInputs.title}
+
+## License
+${userInputs.license}
+
   
 ## Description 
 ${userInputs.description}\n
 `
   markdownSample += toc;
-
   if(userInputs.installation !=='') {
   markdownSample +=
 `
@@ -74,7 +76,7 @@ ${userInputs.test}
 `
 ## Questions?
 * To reach me with additional questions feel free to contact me. *\n
-GitHub: @${userInputs.username}\n
+GitHub: https://github.com/${userInputs.username}\n
 Email: ${userInputs.email}
 
 ## License
