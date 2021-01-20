@@ -1,21 +1,26 @@
-# Testing the title
+# Project
   
 Badge posted here TBD.
   
 ## Description 
-Here is the project description
+desrition
 
 ## Table of Contents
+* [Usage](#usage)
 * [Contribution](#contribution)
 
+## Usage 
+two
+
 ## Contributing
-Don't break it.
+three
 
 ## Questions?
-* To reach me with additional questions feel free to contact me.
+* To reach me with additional questions feel free to contact me. *
+
 GitHub: @mrramontorres
 
-Email: email@ramon.nyc
+Email: email@me.nyc
 
 ## License
-Attribution License (BY)
+GNU GPL v3

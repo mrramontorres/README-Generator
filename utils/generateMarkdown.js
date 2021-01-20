@@ -73,7 +73,7 @@ ${userInputs.test}
   markdownSample +=
 `
 ## Questions?
-* To reach me with additional questions feel free to contact me.
+* To reach me with additional questions feel free to contact me. *\n
 GitHub: @${userInputs.username}\n
 Email: ${userInputs.email}
 
