@@ -9,7 +9,7 @@ Here is where the description of the project can be found in your README file.
 
 ## Table of Contents
 * [Installation](#installation)
-* [Contribution](#contribution)
+* [Contribution](#contributing)
 
 ## Installation 
 Instructions for how to install this can be found in this section.

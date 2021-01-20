@@ -41,9 +41,9 @@ function generateMarkdown(userInputs) {
   if(userInputs.usage !=='') { toc += 
     `* [Usage](#usage)\n`};
   if(userInputs.contribution !=='') { toc += 
-    `* [Contribution](#contribution)\n`};
+    `* [Contribution](#contributing)\n`};
   if(userInputs.test !=='') { toc += 
-    `* [Tests](#test)\n`};
+    `* [Tests](#tests)\n`};
 
   //console.log(toc);
 
