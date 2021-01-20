@@ -1,31 +1,24 @@
-# Title
+# tues
   
   Badge posted here TBD.
   
   ## Description 
-  Poppa
+  now
 
   ## Table of Contents
 * [Installation](#installation)
-* [Usage](#usage)
-* [Contribution](#contribution)
 * [Tests](#test)
   ## Installation 
-  Blank
-  
-  ## Usage 
-  I'm good
-  
-  ## Contributing
-  thanks but no
+  now
   
   ## Tests
-  damn it 
+  now
   
   ## Questions
-  GitHub: @jason
-  Email: email@domain.com
+  GitHub: @mrramontorres
+
+  Email: no email
 
   ## License
-  Apache 2.0 License
+  Public Domain Dedication and License (PDDL)
   

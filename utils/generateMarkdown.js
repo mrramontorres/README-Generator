@@ -71,14 +71,14 @@ function generateMarkdown(userInputs) {
   };
 
   markdownSample +=`
-  ## Questions
-  GitHub: @${userInputs.username}
+  ## Questions?
+  * To reach me with additional questions feel free to contact me.
+  GitHub: @${userInputs.username}\n
   Email: ${userInputs.email}
 
   ## License
   ${userInputs.license}
   `
-
   return markdownSample;
 }
 
