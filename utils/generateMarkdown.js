@@ -49,20 +49,19 @@ function generateMarkdown(userInputs) {
 
 //Markdown
 let markdownSample =
-
 `
-
 # ${userInputs.title}
 `
  markdownSample += 
   renderLicenseLink(userInputs);
-`
 
+ markdownSample +=
+
+ `
 ## Description 
 ${userInputs.description}\n
 
 `
-
   markdownSample += toc;
 
   if(userInputs.installation !=='') {

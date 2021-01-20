@@ -1,7 +1,11 @@
 
-
 # Project Title
 ![Badge for licsense](https://img.shields.io/badge/license-The%20MIT%20License-brightgreen)
+
+## Description 
+Here is where the description of the project can be found in your README file.
+
+
 
 ## Table of Contents
 * [Installation](#installation)
