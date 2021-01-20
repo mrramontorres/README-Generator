@@ -1,7 +1,7 @@
 
 
 # test
-![Badge for licsense](https://img.shields.io/badge/license-blank-brightgreen)
+![Badge for licsense](https://img.shields.io/badge/license-CC0-brightgreen)
 
 ## Table of Contents
 * [Installation](#installation)
