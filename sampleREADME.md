@@ -1,7 +1,7 @@
 
 
 # test
-https://img.shields.io/badge/license-userInput.license-brightgreen
+https://img.shields.io/badge/license-blank-brightgreen
 
 ## Table of Contents
 * [Installation](#installation)
@@ -10,28 +10,28 @@ https://img.shields.io/badge/license-userInput.license-brightgreen
 * [Tests](#test)
 
 ## Installation 
-1
+a
 
 
 ## Usage 
-2
+b
 
 
 ## Contributing
-3
+c
 
 
 ## Tests
-4
+d
 
 
 ## Questions?
 *To reach me with additional questions feel free to contact me at:*
 
-GitHub: https://github.com/test
+GitHub: https://github.com/blah
 
 Email: email@domain.com
 
 
 ## License
-Public Domain Dedication and License (PDDL)
+CC0

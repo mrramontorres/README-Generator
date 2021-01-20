@@ -1,13 +1,16 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge() {
-  renderLicenseLink(userInputs);}
+  licenseBadge = 'blank'
+  return licenseBadge
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(userInputs) {
   if(userInputs.license !=='') {
-    licenseLink = 'https://img.shields.io/badge/license-userInput.license-brightgreen\n'
+    renderLicenseBadge()
+    licenseLink = 'https://img.shields.io/badge/license-'+ licenseBadge + '-brightgreen\n'
   } else {
     licenseLink = ''
   }
