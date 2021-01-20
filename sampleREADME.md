@@ -17,7 +17,7 @@ None at the moment.
 Feel free to add whatever you'd like.
 
 ## Questions?
-* To reach me with additional questions feel free to contact me. *
+*To reach me with additional questions feel free to contact me.*
 
 GitHub: https://github.com/mrramontorres
 
