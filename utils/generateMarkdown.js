@@ -3,7 +3,7 @@
 function renderLicenseBadge(userInputs) {
   
   licenseBadge = userInputs.license;
-  licenseBadge = licenseBadge.split(" ").join("-");
+  licenseBadge = licenseBadge.split(" ").join("%20");
   return licenseBadge
 }
 
