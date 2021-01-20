@@ -2,7 +2,8 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(userInputs) {
   
-  licenseBadge = userInputs.license
+  licenseBadge = userInputs.license;
+  licenseBadge = licenseBadge.split(" ").join("-");
   return licenseBadge
 }
 
