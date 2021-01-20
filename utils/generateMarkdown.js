@@ -16,8 +16,12 @@ function renderLicenseLink(userInputs) {
 //Function  returns the license section of README
 //If there is no license, return an empty string
 function renderLicenseSection(userInputs) {
-  let license =  `## License\n${userInputs.license}`
-  return license
+  if(userInputs.license !=='') {
+    license = `\n## License\n${userInputs.license}`
+  } else {
+    license = ''
+  }
+  return license 
 };
 
 //Function that generates markdown for README
@@ -43,10 +47,9 @@ let markdownSample =
 `
 
 # ${userInputs.title}
-License Badge to go here.
-
 `
- markdownSample += renderLicenseLink(userInputs);
+ markdownSample += 
+  renderLicenseLink(userInputs);
 `
 
 ## Description 
@@ -100,11 +103,11 @@ ${userInputs.test}
 ## Questions?
 *To reach me with additional questions feel free to contact me.*\n
 GitHub: https://github.com/${userInputs.username}\n
-Email: ${userInputs.email}
-
+Email: ${userInputs.email}\n
 `
 
-markdownSample += renderLicenseSection(userInputs);
+  markdownSample += 
+    renderLicenseSection(userInputs);
 
   return markdownSample;
 
