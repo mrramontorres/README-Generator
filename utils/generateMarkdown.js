@@ -6,12 +6,15 @@ function renderLicenseBadge(license) {}
 // If there is no license, return an empty string
 function renderLicenseLink(license) {}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+//TODO: Create a function that returns the license section of README
+//If there is no license, return an empty string
+function renderLicenseSection(userInputs) {
+  let license =  `##License\n${userInputs.license}`
+  return license
+};
 
 //Function that generates markdown for README
-function generateMarkdown(userInputs) {
+function generateMarkdown(userInputs, license) {
 
   //Table of Contents provided by user
   let toc = `## Table of Contents\n`;
@@ -28,34 +31,38 @@ function generateMarkdown(userInputs) {
   //console.log(toc);
 
 //Markdown
-let markdownSample = 
+let markdownSample =
+
 `
 # ${userInputs.title}
 License Badge to go here.
 
-  
 ## Description 
 ${userInputs.description}\n
 `
+
   markdownSample += toc;
+
   if(userInputs.installation !=='') {
-  markdownSample +=
+    markdownSample +=
+
 `
 ## Installation 
 ${userInputs.installation}
 `
   };
-  
+
   if(userInputs.usage !=='') {
-  markdownSample +=
+    markdownSample +=
 `
 ## Usage 
 ${userInputs.usage}
 `
   };
-  
+
   if(userInputs.contribution !=='') {
     markdownSample +=
+
 `
 ## Contributing
 ${userInputs.contribution}
@@ -64,23 +71,24 @@ ${userInputs.contribution}
 
   if(userInputs.test !==``) {
     markdownSample +=
+
 `
 ## Tests
 ${userInputs.test}
 `
   };
 
-  markdownSample +=
 `
 ## Questions?
 *To reach me with additional questions feel free to contact me.*\n
 GitHub: https://github.com/${userInputs.username}\n
 Email: ${userInputs.email}
-
-## License
-${userInputs.license}
 `
+
+markdownSample += renderLicenseSection(userInputs);
+
   return markdownSample;
+
 }
 
 module.exports = generateMarkdown;
