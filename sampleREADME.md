@@ -1,7 +1,7 @@
 
 
 # test
-https://img.shields.io/badge/license-blank-brightgreen
+![Badge for licsense](https://img.shields.io/badge/license-blank-brightgreen)
 
 ## Table of Contents
 * [Installation](#installation)
@@ -28,7 +28,7 @@ d
 ## Questions?
 *To reach me with additional questions feel free to contact me at:*
 
-GitHub: https://github.com/blah
+GitHub: https://github.com/test
 
 Email: email@domain.com
 

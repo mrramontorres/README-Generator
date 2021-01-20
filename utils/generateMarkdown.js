@@ -10,7 +10,7 @@ function renderLicenseBadge() {
 function renderLicenseLink(userInputs) {
   if(userInputs.license !=='') {
     renderLicenseBadge()
-    licenseLink = 'https://img.shields.io/badge/license-'+ licenseBadge + '-brightgreen\n'
+    licenseLink = '![Badge for licsense](https://img.shields.io/badge/license-'+ licenseBadge + '-brightgreen)\n'
   } else {
     licenseLink = ''
   }
