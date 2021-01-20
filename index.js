@@ -53,11 +53,10 @@ const questions = [
     type: 'list',
     message: 'Please chose a license from the following options:',
     name: 'license',
-    choices: ['Apache 2.0 License','Boost Software License 1.0', 'BSD 3-Clause License', 
-    'BSD 2-Clause License', 'CC0','Attribution 4.0 International','GNU GPL v3','GNU AGPL v3',
+    choices: ['', 'CC0','Attribution 4.0 International','GNU GPL v3','GNU AGPL v3',
     'IBM Public License Version 1.0','ISC License (ISC)','The MIT License',
     'Mozilla Public License 2.0','Attribution License (BY)', 'Open Database License (ODbL)',
-    'Public Domain Dedication and License (PDDL)', 'The Perl License', 'SIL Open Font License 1.1']
+    'Public Domain Dedication and License (PDDL)']
   },
   {
     type: 'input',

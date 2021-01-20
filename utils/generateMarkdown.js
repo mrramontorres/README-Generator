@@ -4,20 +4,27 @@ function renderLicenseBadge(license) {}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(userInputs) {
+  if(userInputs.license !=='') {
+    licenseLink = 'LINK\n'
+  } else {
+    licenseLink = ''
+  }
+  return licenseLink 
+}
 
-//TODO: Create a function that returns the license section of README
+//Function  returns the license section of README
 //If there is no license, return an empty string
 function renderLicenseSection(userInputs) {
-  let license =  `##License\n${userInputs.license}`
+  let license =  `## License\n${userInputs.license}`
   return license
 };
 
 //Function that generates markdown for README
-function generateMarkdown(userInputs, license) {
+function generateMarkdown(userInputs) {
 
   //Table of Contents provided by user
-  let toc = `## Table of Contents\n`;
+  let toc = `\n## Table of Contents\n`;
 
   if(userInputs.installation !=='') { toc += 
     `* [Installation](#installation)\n`};
@@ -26,7 +33,7 @@ function generateMarkdown(userInputs, license) {
   if(userInputs.contribution !=='') { toc += 
     `* [Contribution](#contribution)\n`};
   if(userInputs.test !=='') { toc += 
-    `* [Tests](#test)`};
+    `* [Tests](#test)\n`};
 
   //console.log(toc);
 
@@ -34,11 +41,17 @@ function generateMarkdown(userInputs, license) {
 let markdownSample =
 
 `
+
 # ${userInputs.title}
 License Badge to go here.
 
+`
+ markdownSample += renderLicenseLink(userInputs);
+`
+
 ## Description 
 ${userInputs.description}\n
+
 `
 
   markdownSample += toc;
@@ -49,6 +62,7 @@ ${userInputs.description}\n
 `
 ## Installation 
 ${userInputs.installation}
+
 `
   };
 
@@ -57,6 +71,7 @@ ${userInputs.installation}
 `
 ## Usage 
 ${userInputs.usage}
+
 `
   };
 
@@ -66,6 +81,7 @@ ${userInputs.usage}
 `
 ## Contributing
 ${userInputs.contribution}
+
 `
   };
 
@@ -75,14 +91,17 @@ ${userInputs.contribution}
 `
 ## Tests
 ${userInputs.test}
+
 `
   };
 
+  markdownSample += 
 `
 ## Questions?
 *To reach me with additional questions feel free to contact me.*\n
 GitHub: https://github.com/${userInputs.username}\n
 Email: ${userInputs.email}
+
 `
 
 markdownSample += renderLicenseSection(userInputs);
