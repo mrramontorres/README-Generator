@@ -31,9 +31,7 @@ function generateMarkdown(userInputs) {
 let markdownSample = 
 `
 # ${userInputs.title}
-
-## License
-${userInputs.license}
+License Badge to go here.
 
   
 ## Description 
