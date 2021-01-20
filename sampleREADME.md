@@ -1,37 +1,27 @@
 
 
-# testing
-![Badge for licsense](https://img.shields.io/badge/license-Attribution%204.0%20International-brightgreen)
+# Project Title
+![Badge for licsense](https://img.shields.io/badge/license-The%20MIT%20License-brightgreen)
 
 ## Table of Contents
 * [Installation](#installation)
-* [Usage](#usage)
 * [Contribution](#contribution)
-* [Tests](#test)
 
 ## Installation 
-1
-
-
-## Usage 
-2
+Instructions for how to install this can be found in this section.
 
 
 ## Contributing
-3
-
-
-## Tests
-4
+Feel free to contribute to this application.
 
 
 ## Questions?
 *To reach me with additional questions feel free to contact me at:*
 
-GitHub: https://github.com/lastone
+GitHub: https://github.com/mrramontorres
 
-Email: email@domain.com
+Email: me@ramon.nyc
 
 
 ## License
-Attribution 4.0 International
+The MIT License
